@@ -1,6 +1,7 @@
 import express from "express"
 import { airport_autocomplete } from "../controller/airport_autocomplete.js"
 import { code_aiport } from "../controller/code_airport.js"
+import { entities_hotel } from "../controller/entities_hotel.js"
 import { fullsearch } from "../controller/fullsearch.js"
 import { result_hotel } from "../controller/result_hotel.js"
 import { search_hotel } from "../controller/search_hotel.js"
@@ -16,4 +17,5 @@ router.get("/api/v1/airport/autocomplete", airport_autocomplete)
 router.get("/api/v2/airport/codeairport", code_aiport )
 router.post("/api/v4/airport/fullsearch", fullsearch)
 router.post("/v2/api/result/hotel", result_hotel)
+router.post("/v2/api/entities/hotel", entities_hotel)
 export default router
