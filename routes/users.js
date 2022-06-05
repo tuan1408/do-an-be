@@ -1,6 +1,12 @@
 import express from "express"
+import { add_flight } from "../controller/add_flight.js"
+import { add_hotel } from "../controller/add_hotel.js"
+import { admin } from "../controller/admin.js"
 import { airport_autocomplete } from "../controller/airport_autocomplete.js"
+import { bookingticket } from "../controller/bookingticket.js"
 import { code_aiport } from "../controller/code_airport.js"
+import { delete_ } from "../controller/delete_.js"
+import { detail } from "../controller/detail.js"
 import { entities_hotel } from "../controller/entities_hotel.js"
 import { fullsearch } from "../controller/fullsearch.js"
 import { login } from "../controller/login.js"
@@ -11,6 +17,7 @@ import { search_combo } from "../controller/search_combo.js"
 import { search_hotel } from "../controller/search_hotel.js"
 import { signup } from "../controller/signup.js"
 import { suggest } from "../controller/suggest.js"
+import { suggest2 } from "../controller/suggest2.js"
 import { suggest_travel } from "../controller/suggest_travel.js"
 const router = express.Router()
 /* GET users listing. */
@@ -30,5 +37,12 @@ router.post("/v4/api/prebooking", prebooking)
 router.post("/v2/api/suggest/result", suggest)
 router.post("/signup",signup)
 router.post("/login", login)
+router.post("/suggest2", suggest2)
+router.post("/admin", admin)
+router.post("/booking/ticket", bookingticket)
+router.post("/detail", detail)
+router.post("/delete", delete_)
+router.post("/add_flight", add_flight)
+router.post("/add_hotel", add_hotel)
 
 export default router
