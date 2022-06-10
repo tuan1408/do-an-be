@@ -52,4 +52,16 @@ export const admin= (req, res)=> {
             return res.json(rows)
         })
     }
+    if(s2=== "new_flight") {
+        connection.query(`SELECT * FROM ${s1} WHERE timeup= '${moment(new Date()).format("DD-MM-YYYY")}'`, (err, rows, fields)=> {
+            if(err) return console.log(err)
+            return res.json(rows)
+        })
+    }
+    if(s2=== "new_hotel") {
+        connection.query(`SELECT * FROM ${s1} WHERE timeup= '${moment(new Date()).format("DD-MM-YYYY")}'`, (err, rows, fields)=> {
+            if(err) return console.log(err)
+            return res.json(rows)
+        })
+    }
 }

@@ -9,6 +9,7 @@ import { delete_ } from "../controller/delete_.js"
 import { detail } from "../controller/detail.js"
 import { entities_hotel } from "../controller/entities_hotel.js"
 import { fullsearch } from "../controller/fullsearch.js"
+import { getcustomer } from "../controller/get_customer.js"
 import { login } from "../controller/login.js"
 import { prebooking } from "../controller/prebooking.js"
 import { result_hotel } from "../controller/result_hotel.js"
@@ -44,5 +45,6 @@ router.post("/detail", detail)
 router.post("/delete", delete_)
 router.post("/add_flight", add_flight)
 router.post("/add_hotel", add_hotel)
+router.post("/api/v1/get/customer/book", getcustomer)
 
 export default router
