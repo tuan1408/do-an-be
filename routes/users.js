@@ -3,6 +3,7 @@ import { add_flight } from "../controller/add_flight.js"
 import { add_hotel } from "../controller/add_hotel.js"
 import { admin } from "../controller/admin.js"
 import { airport_autocomplete } from "../controller/airport_autocomplete.js"
+import { auto } from "../controller/auto.js"
 import { bookingticket } from "../controller/bookingticket.js"
 import { code_aiport } from "../controller/code_airport.js"
 import { delete_ } from "../controller/delete_.js"
@@ -45,6 +46,7 @@ router.post("/detail", detail)
 router.post("/delete", delete_)
 router.post("/add_flight", add_flight)
 router.post("/add_hotel", add_hotel)
+router.post("/auto", auto)
 router.post("/api/v1/get/customer/book", getcustomer)
 
 export default router
