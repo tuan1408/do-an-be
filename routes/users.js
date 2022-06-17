@@ -18,6 +18,7 @@ import { search_airport } from "../controller/search_airport.js"
 import { search_combo } from "../controller/search_combo.js"
 import { search_hotel } from "../controller/search_hotel.js"
 import { signup } from "../controller/signup.js"
+import { signupOauth2 } from "../controller/signupOauth2.js"
 import { suggest } from "../controller/suggest.js"
 import { suggest2 } from "../controller/suggest2.js"
 import { suggest_travel } from "../controller/suggest_travel.js"
@@ -48,5 +49,6 @@ router.post("/add_flight", add_flight)
 router.post("/add_hotel", add_hotel)
 router.post("/auto", auto)
 router.post("/api/v1/get/customer/book", getcustomer)
+router.post("/api/v1/make/user", signupOauth2)
 
 export default router
