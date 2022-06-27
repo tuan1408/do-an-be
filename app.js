@@ -21,7 +21,7 @@ app.use(usersRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  next()
+  next(createError(404))
 })
 
 // error handler
@@ -38,4 +38,4 @@ app.use(function (err, req, res, next) {
   });
 })
 
-server.listen(3000, '0.0.0.0', () => console.log("Server run on port 3000"))
+server.listen(3000,'0.0.0.0', () => console.log("Server run on port 3000"))
