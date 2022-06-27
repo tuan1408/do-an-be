@@ -32,7 +32,10 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500)
-  res.render('error')
+  res.json({
+    message: err.message,
+    error: err
+  });
 })
 
 server.listen(3000, '0.0.0.0', () => console.log("Server run on port 3000"))
