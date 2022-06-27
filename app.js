@@ -7,7 +7,7 @@ import http from "http"
 import cors from "cors"
 
 const app = express()
-const server= http.createServer(app)
+const server = http.createServer(app)
 // view engine setup
 
 app.use(logger('dev'))
@@ -20,12 +20,12 @@ app.use('/', indexRouter)
 app.use(usersRouter)
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404))
 })
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message
   res.locals.error = req.app.get('env') === 'development' ? err : {}
@@ -35,4 +35,4 @@ app.use(function(err, req, res, next) {
   res.render('error')
 })
 
-server.listen(4000, ()=> console.log("Server run on port 4000"))
+server.listen(3000, '0.0.0.0', () => console.log("Server run on port 3000"))
